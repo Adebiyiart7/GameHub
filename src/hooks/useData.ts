@@ -12,7 +12,7 @@ const useData = <T>(
   requestConfig?: AxiosRequestConfig,
   deps?: any[]
 ) => {
-  const [data, setGenres] = useState<T[]>([]);
+  const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,7 +27,7 @@ const useData = <T>(
           ...requestConfig,
         })
         .then((res) => {
-          setGenres(res.data.results);
+          setData(res.data.results);
           setLoading(false);
         })
         .catch((error) => {
