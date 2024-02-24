@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 // Local Imports
 import App from "./App";
 import theme from "./theme";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
